@@ -1,9 +1,16 @@
 {
-    "name": "Selection Search",
+    "name": "Search Selected",
     "description": "An extension that will allow the user to search for the currently selected text in a new tab with a single keypress",
     "version": "0.0",
-    "manifest_version": 2,
-    "background": {
-        "service_worker": "background.js"
+    "manifest_version": 3,
+    "service_worker": "selection_search.js",
+    "permissions": ["storage"],
+    "commands": {
+        "search_new_tab": {
+            "suggested_key": {
+                "default": "Alt+Z"
+            },
+        "description": "Loads the current text selection as search in a new tab"
+        }
     }
 }
