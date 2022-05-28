@@ -2,5 +2,8 @@
     "name": "Selection Search",
     "description": "An extension that will allow the user to search for the currently selected text in a new tab with a single keypress",
     "version": "0.0",
-    "manifest_version": 2
+    "manifest_version": 2,
+    "background": {
+        "service_worker": "background.js"
+    }
 }
